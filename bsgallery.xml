@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" method="upgrade" element="bsgallery">
+    <name>plg_content_bsgallery</name>
+    <author>Salah JAAFAR</author>
+    <creationDate>01-05-2026</creationDate>
+    <version>1.0.0</version>
+    <description>Transforme la balise bsgallery en galerie Bootstrap 5</description>
+    
+    <!-- Déclaration du Namespace -->
+    <namespace path="src">Joomla\Plugin\Content\Bsgallery</namespace>
+    
+    <!-- CORRECTION ICI : L'attribut plugin="bsgallery" est sur le dossier services -->
+    <files>
+        <folder plugin="bsgallery">services</folder>
+        <folder>src</folder>
+    </files>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field 
+                    name="columns" 
+                    type="list" 
+                    default="4" 
+                    label="Nombre de colonnes">
+                    <option value="2">2 colonnes</option>
+                    <option value="3">3 colonnes</option>
+                    <option value="4">4 colonnes</option>
+                    <option value="6">6 colonnes</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
